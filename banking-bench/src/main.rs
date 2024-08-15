@@ -384,11 +384,11 @@ fn main() {
     let num_chunks = matches.value_of_t::<usize>("num_chunks").unwrap_or(16);
     let packets_per_batch = matches
         .value_of_t::<usize>("packets_per_batch")
-        .unwrap_or(192);
+        .unwrap_or(200);
     let iterations = matches.value_of_t::<usize>("iterations").unwrap_or(1000);
     let batches_per_iteration = matches
         .value_of_t::<usize>("batches_per_iteration")
-        .unwrap_or(BankingStage::num_threads() as usize);
+        .unwrap_or(5);
     let write_lock_contention = matches
         .value_of_t::<WriteLockContention>("write_lock_contention")
         .unwrap_or(WriteLockContention::None);
