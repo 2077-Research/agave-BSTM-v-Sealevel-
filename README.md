@@ -61,7 +61,7 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 --block-production-method - options are central-scheduler and thread-local-multi-iterator. CS is default \
 --num-banking-threads <value> - number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote) \
 
-#### Write-lock-contetntion Tests -- Default Behaviour \
+#### Write-lock-contetntion Tests -- Default Behaviour
 --write-lock-contention <value> - oprions are full, same-batch-only, and none. Default none \
 --simulate-mint - Should there be "mint transactions" Mint transactions are transactions that have higher priority. \
 --mint-txs-percentage <value> - percentage of mint transactions. Default 99 \
