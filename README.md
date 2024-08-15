@@ -59,16 +59,16 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 --trace-banking - enable bank tracing i.e., logging scheduled transaction data. Can be used with apfitzge's banking trace tool and graphia to vizualize prio-graphs. \
 --tpu-disable-quic - disable quic forwarding \
 --block-production-method - options are central-scheduler and thread-local-multi-iterator. CS is default \
---num-banking-threads <value> - number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote) \
+--num-banking-threads <value> - number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote)  
 
 #### Write-lock-contetntion Tests -- Default Behaviour
 --write-lock-contention <value> - oprions are full, same-batch-only, and none. Default none \
 --simulate-mint - Should there be "mint transactions" Mint transactions are transactions that have higher priority. \
---mint-txs-percentage <value> - percentage of mint transactions. Default 99 \
+--mint-txs-percentage <value> - percentage of mint transactions. Default 99  
 
 #### Account-based-contention Tests
 --is-accounts - boolean value that indicates that tests should use account-based contention. \
---num-accounts <value> - number of accounts. Default 1000 \
+--num-accounts <value> - number of accounts. Default 1000  
 
 A simple bash script can automate the data collection process for account-based contention. You can modify it to include central-scheduler data if you're interested.
 
