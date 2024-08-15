@@ -78,7 +78,7 @@ schedulers=("thread-local-multi-iterator" "central-scheduler")
 threads=(6 10 14 18 26 34)
 accounts=(2 10 20 30 50 80 100 1000 10000)
 packets=(200 2000)
-output_directory="/home/ubuntu/data/accounts"
+output_directory="/home/ubuntu/data/accounts" #adjust as necessary.
 
 #create data directory
 cd
