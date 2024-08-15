@@ -70,6 +70,7 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 --is-accounts - boolean value that indicates that tests should use account-based contention. \
 --num-accounts <value> - number of accounts. Default 1000  
 
+## Script to automate data collection
 A simple bash script can automate the data collection process for account-based contention. You can modify it to include central-scheduler data if you're interested.
 
 ```bash
