@@ -51,26 +51,30 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 
 ### Commands
 ```bash
---iterations <value> // Number of test iterations \
---num-chunks <value> // Number of packet chunks; it's an internal value with little to no significance to the runs. \
---packets-per-batch <value> // Number of packets per batch. Default 200 \
---batches-per-iteration <value> // Number of batches per iteration. Default 5. \
-  //Note: total number of transactions per iteration = packets-per-batch * batches-per-iteration \
---skip-sanity // skip sanity check to ensure tranactions can execute in parallel \
+--iterations <value> // Number of test iterations
+--num-chunks <value> // Number of packet chunks. It's an internal value with little to no significance to performance.
+--packets-per-batch <value> // Number of packets per batch. Default 200.
+--batches-per-iteration <value> // Number of batches per iteration. Default 5.
+  //Note: total number of transactions per iteration = packets-per-batch * batches-per-iteration
+--skip-sanity // skip sanity check to ensure tranactions can execute in parallel.
 --trace-banking // enable bank tracing i.e., logging scheduled transaction data. Can be used with @apfitzge's banking trace tool and graphia to vizualize prio-graphs. \
---tpu-disable-quic // disable quic forwarding \
---block-production-method // options are central-scheduler and thread-local-multi-iterator. CS is default \
+--tpu-disable-quic // disable quic forwarding
+--block-production-method // options are central-scheduler and thread-local-multi-iterator. CS is default
 --num-banking-threads <value> // number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote)  
 ```
 
 #### Write-lock-contetntion Tests -- Default Behaviour
---write-lock-contention <value> - options are full, same-batch-only, and none. Default none \
---simulate-mint - Should there be "mint transactions" in the block? Mint transactions are transactions that have higher priority and lock the same account. \
---mint-txs-percentage <value> - percentage of mint transactions. Default 99  
+```bash
+--write-lock-contention <value> // options are full, same-batch-only, and none. Default none \
+--simulate-mint // Should there be "mint transactions" in the block? Mint transactions are transactions that have higher priority and lock the same account. \
+--mint-txs-percentage <value> // percentage of mint transactions. Default 99  
+```
 
 #### Account-based-contention Tests
---is-accounts - boolean value that indicates that tests should use account-based contention. \
---num-accounts <value> - number of accounts. Default 1000  
+```bash
+--is-accounts // boolean value that indicates that tests should use account-based contention. \
+--num-accounts <value> // number of accounts. Default 1000  
+```
 
 ## Script to automate data collection
 A simple bash script can automate the data collection process for account-based contention. You can modify it to include central-scheduler data if you're interested.
