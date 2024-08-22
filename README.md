@@ -51,16 +51,16 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 
 ### Commands
 ```bash
---iterations <value> - Number of test iterations \
---num-chunks <value> - Number of packet chunks; it's an internal value with little to no significance to the runs. \
---packets-per-batch <value> - Number of packets per batch. Default 200 \
---batches-per-iteration <value> - Number of batches per iteration. Default 5. \
-  Note: total number of transactions per iteration = packets-per-batch * batches-per-iteration \
---skip-sanity - skip sanity check to ensure tranactions can execute in parallel \
---trace-banking - enable bank tracing i.e., logging scheduled transaction data. Can be used with @apfitzge's banking trace tool and graphia to vizualize prio-graphs. \
---tpu-disable-quic - disable quic forwarding \
---block-production-method - options are central-scheduler and thread-local-multi-iterator. CS is default \
---num-banking-threads <value> - number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote)  
+--iterations <value> // Number of test iterations \
+--num-chunks <value> // Number of packet chunks; it's an internal value with little to no significance to the runs. \
+--packets-per-batch <value> // Number of packets per batch. Default 200 \
+--batches-per-iteration <value> // Number of batches per iteration. Default 5. \
+  //Note: total number of transactions per iteration = packets-per-batch * batches-per-iteration \
+--skip-sanity // skip sanity check to ensure tranactions can execute in parallel \
+--trace-banking // enable bank tracing i.e., logging scheduled transaction data. Can be used with @apfitzge's banking trace tool and graphia to vizualize prio-graphs. \
+--tpu-disable-quic // disable quic forwarding \
+--block-production-method // options are central-scheduler and thread-local-multi-iterator. CS is default \
+--num-banking-threads <value> // number of bank threads (must be >= 3). Default 6 (2 Vote, 4 non-vote)  
 ```
 
 #### Write-lock-contetntion Tests -- Default Behaviour
