@@ -99,7 +99,7 @@ cd agave
 for thread in "${threads[@]}"; do
   for account in "${accounts[@]}"; do
     for packet in "${packets[@]}"; do
-      output_file_path="$output_directory/account_${account}_${thread}_${packet}.txt"
+      output_file_path="$output_directory/accounts_${account}_${thread}_${packet}.txt"
       ./cargo run --release --package solana-banking-bench --bin solana-banking-bench \
       -- --iterations 200 --skip-sanity --tpu-disable-quic \
       --block-production-method thread-local-multi-iterator \
