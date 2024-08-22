@@ -65,14 +65,14 @@ Run the command below to run the benchmarks. Feel free to select additional opti
 
 #### Write-lock-contetntion Tests -- Default Behaviour
 ```bash
---write-lock-contention <value> # options are full, same-batch-only, and none. Default none \
+--write-lock-contention <value> # options are full, same-batch-only, and none. Default none
 --simulate-mint # Should there be "mint transactions" in the block? Mint transactions are transactions that have higher priority and lock the same account. \
 --mint-txs-percentage <value> # percentage of mint transactions. Default 99  
 ```
 
 #### Account-based-contention Tests
 ```bash
---is-accounts # boolean value that indicates that tests should use account-based contention. \
+--is-accounts # boolean value that indicates that tests should use account-based contention.
 --num-accounts <value> # number of accounts. Default 1000  
 ```
 
